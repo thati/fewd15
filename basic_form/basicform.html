@@ -5,11 +5,23 @@
 	<title>A Very Basic Form</title>
     
 	<style type="text/css">
-	
-	
-		input {
-			background: #FFC;	
-			margin: 10px;
+
+		.standard_input {
+		background: #fff;
+		padding: 5px 10px;
+		color: #999999;
+		border: solid 1px #ccc;
+		font-size: 14px;
+		display: block;
+		width: 400px;
+		margin-top: 20px;
+		}
+
+		.submit_button {
+			background-color: green;
+			width: 100px;
+			padding: 50px;
+			color: red;
 		}
 
 	</style>
@@ -25,6 +37,32 @@
 		Our simple web form
 	</h1>
 	<form method="post" action="/login.php">
+		<input type="text" id="first_name" class="standard_input" placeholder="First Name" />
+		<input type="email" id="email" name "email" class="standard_input" placeholder="email" />
+		<input type="password" id="password" class="standard_input" placeholder="password" />
+
+		<textarea name="comments" id="comments" class="standard_input" placeholder="Comments"></textarea>
+
+		<div class="break">
+			<input type="radio" name="gender" value="male" checked />Male
+			<input type="radio" name="gender" value="female" />Female
+		</div>
+		<div class="break">
+			<input type="checkbox" name="contact" value="phone" />Phone
+			<input type="checkbox" name="contact" value="email" />Email
+		</div>
+		<div class="break">
+			<select name="dob">
+				<option value="" selected>Select an Age</option>
+				<option value="1988">1988</option>
+				<option value="1987">1987</option>
+				<option value="1986">1986</option>
+			</select>
+		</div>
+		<div class="break">
+			<input type="submit" value="Submit the Form!!!" class="submit_button" />
+
+		</div>
 
 
 	</form>
